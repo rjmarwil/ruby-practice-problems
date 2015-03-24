@@ -13,12 +13,8 @@ class Hello
 
   birthday_data.each do |p|
    if p.include? name
-      names = "#{p[1]} #{p[0]}"
-    end
-   if p.include? name
+     names = "#{p[1]} #{p[0]}"
      birthday = p[2]
-   end
-   if p.include? name
      year, month, day = p[2].split('/')
      age = ((Time.now - Time.local(year,month,day))/60/60/24/365).to_i
    end
